@@ -16,12 +16,12 @@ return new class extends Migration
         $table->longText('value_2')->nullable();
         $table->longText('value_3')->nullable();
         $table->longText('value_4')->nullable();
-        $table->longText('cta_content')->nullable();
-        $table->longText('content')->nullable();
-        $table->longText('product1_content')->nullable();
-        $table->longText('product2_content')->nullable();
-        $table->longText('schedules_content')->nullable();
-        $table->string('phone_content')->nullable();
+        //$table->longText('cta_content')->nullable();
+        //$table->longText('content')->nullable();
+        //$table->longText('product1_content')->nullable();
+        //$table->longText('product2_content')->nullable();
+        //$table->longText('schedules_content')->nullable();
+        //$table->string('phone_content')->nullable();
         $table->string('product1_title')->nullable();
         $table->string('product1_price')->nullable();
         $table->string('product2_title')->nullable();
