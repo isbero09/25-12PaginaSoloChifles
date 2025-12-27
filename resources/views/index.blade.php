@@ -59,11 +59,22 @@
                         <li class="nav-item"><a class="nav-link" href="{{ url('/reviews') }}">Reseñas</a></li>
                     </ul>
                 </div>
-                <div class="d-flex">
-                    <a href="{{ route('login') }}" class="btn btn-warning btn-lg px-4 py-2 fw-bold text-dark shadow-sm">
-                        <i class="fas fa-sign-in-alt me-2"></i>Acceder
-                    </a>
-                </div>
+                @if(Auth::check())
+                    <div class="d-flex align-items-center">
+                        <span class="me-3 text-white">Hola, {{ Auth::user()->name }}</span>
+                        <a href="{{ route('profile.edit') }}" class="btn btn-outline-light me-2">Perfil</a>
+                        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                            @csrf
+                            <button type="submit" class="btn btn-warning">Cerrar sesión</button>
+                        </form>
+                    </div>
+                @else
+                    <div class="d-flex">
+                        <a href="{{ route('login') }}" class="btn btn-warning btn-lg px-4 py-2 fw-bold text-dark shadow-sm">
+                            <i class="fas fa-sign-in-alt me-2"></i>Acceder
+                        </a>
+                    </div>
+                @endif
             </div>
         </nav>
         <section class="page-section clearfix">
