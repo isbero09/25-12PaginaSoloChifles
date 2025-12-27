@@ -41,8 +41,8 @@
                 </ul>
             </div>
             <div class="d-flex">
-                <a href="{{ route('page.show', ['slug' => 'index']) }}" class="btn btn-warning btn-lg px-4 py-2 fw-bold text-dark shadow-sm">
-                    <i class="fas fa-sign-in-alt me-2"></i>PARTIR
+                <a href="{{ route('page.show', ['slug' => '/']) }}" class="btn btn-warning btn-lg px-4 py-2 fw-bold text-dark shadow-sm">
+                    <i class="fas fa-sign-in-alt me-2"></i>SALIR
                 </a>
             </div>
         </div>
