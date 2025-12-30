@@ -39,15 +39,10 @@ services:
           name: websolochifles-db
           property: password
 
-  # Database Service (PostgreSQL)
-  - type: psql
-    name: websolochifles-db
-    plan: free
-    region: oregon
-    databaseName: websolochifles
-    user: websolochifles
 
 databases:
   - name: websolochifles-db
     plan: free
     region: oregon
+    databaseName: websolochifles
+    user: websolochifles
