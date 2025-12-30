@@ -34,7 +34,10 @@ Route::middleware('auth')->group(function () {
 });
 
 // Paneles públicos dinámicos
-Route::get('/{slug?}', [PageController::class, 'show'])
+// Paneles públicos dinámicos
+Route::get('/', [PageController::class, 'show'])->defaults('slug', 'index')->name('home');
+
+Route::get('/{slug}', [PageController::class, 'show'])
     ->whereIn('slug', ['index', 'about', 'products', 'store', 'reviews'])
     ->name('page.show');
 
