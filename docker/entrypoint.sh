@@ -7,6 +7,10 @@ set -e
 echo "Running migrations..."
 php artisan migrate --force
 
+# Seed database with initial data
+echo "Seeding database..."
+php artisan db:seed --force
+
 # Cache configuration, routes, and views
 echo "Caching configuration..."
 php artisan config:cache
